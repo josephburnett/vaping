@@ -22,7 +22,7 @@ plugins:
   - name: std_fping
     type: fping
     count: 10
-    interval: 3s
+    interval: 1m
     output:
       - vodka
 
@@ -36,7 +36,7 @@ plugins:
             index: host
           - type: store
             container: list
-            limit: 500
+            limit: 10080
 
     apps:
       graphsrv:
