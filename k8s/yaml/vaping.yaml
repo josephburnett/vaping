@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vaping
+  labels:
+    app: vaping
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vaping
+  template:
+    metadata:
+      labels:
+        app: vaping
+    spec:
+      containers:
+      - name: vaping
+        image: josephburnett/vaping
+        ports:
+        - containerPort: 7021
